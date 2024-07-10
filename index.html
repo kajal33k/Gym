@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE GYM</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="input.css">
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="script.js"></script>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<!-- icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="h-screen w-screen">
+  <header class="bg-black shadow-lg">
+    <nav class="container mx-auto flex items-center justify-between py-4 w-screen md:py-4 md:px-4">
+      <!-- Logo -->
+      <div class="flex items-center">
+       <h1 class="text-white font-bold text-xl">THE GYM</h1>
+      </div>
+      
+      <!-- Mobile menu toggle button -->
+      <button class="text-white md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      
+      <!-- Dropdown menu -->
+      <ul id="dropdownMenu" class="hidden md:flex md:items-center space-x-4">
+        <li class="relative">
+          <a href="index.html" class="text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">Home</a>
+        </li>
+        <li class="relative">
+          <a href="about.html" class="text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">About</a>
+        </li>
+        <li class="relative">
+          <a href="feature.html" class="text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">Our Features</a>
+        </li>
+        <li class="relative">
+          <a href="classes.html" class="text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">Classes</a>
+        </li>
+        <li class="relative dropdown-container">
+          <button type="button" class="dropdown-toggle border hover:border-white text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">
+            Pages
+          </button>
+          <ul class="dropdown hidden bg-white">
+            <li><a href="blog.html" class="block px-3 py-2 bg-white text-black hover:bg-gray-200">Blogs Grid</a></li>
+            <li><a href="blogdetail.html" class="block px-3 py-2 bg-white text-black hover:bg-gray-200">Blogs Details</a></li>
+          </ul>
+        </li> 
+        <li class="relative">
+          <a href="contact.html" class="text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Mobile dropdown menu -->
+  <div id="mobileMenu" class="md:hidden bg-white shadow-lg">
+    <ul class="flex flex-col items-center">
+      <li class="py-2">
+        <a href="index.html" class="text-black hover:text-red-500 font-medium">Home</a>
+      </li>
+      <li class="py-2">
+        <a href="about.html" class="text-black hover:text-red-500 font-medium">About</a>
+      </li>
+      <li class="py-2">
+        <a href="feature.html" class="text-black hover:text-red-500 font-medium">Our features</a>
+      </li>
+      <li class="py-2">
+        <a href="classes.html" class="text-black hover:text-red-500 font-medium">Classes</a>
+      </li>
+      <li class="relative dropdown-container">
+        <button type="button" class="text-black hover:text-red-500 font-medium">
+          Pages
+        </button>
+        <ul class="dropdown hidden bg-white py-2">
+          <li><a href="blog.html" class="block px-3 py-2 bg-white text-black hover:bg-gray-200">Blogs Grid</a></li>
+          <li><a href="blogdetail.html" class="block px-3 py-2 bg-white text-black hover:bg-gray-200">Blogs Details</a></li>
+        </ul>
+      </li>
+      <li class="py-2">
+        <a href="contact.html" class="text-black hover:text-red-500 font-medium">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- JavaScript to toggle mobile menu -->
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+  
+<!--FIRST (SLIDER)-->
+<div class="swiper relative w-full h-screen">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+      
+      <!-- Slide 1 -->
+      <div class="swiper-slide relative">
+          <img src="main-img/carousel-1.jpg" alt="" class="object-center object-cover w-full h-full bg-opacity-40">
+          <div class="absolute inset-0 flex justify-center items-center">
+              <div class="slide-content text-center text-white">
+                  <h2 class="text-3xl md:text-3xl font-bold text-red-600">Gym & Fitness Center</h2>
+                  <h3 class="text-6xl md:text-6xl font-semibold font-serif mt-8">Best Gym In Town</h3>
+                  <button class="mt-8 px-6 py-2 bg-transparent text-white hover:bg-white hover:text-black border border-white text-xl">Join Us Now</button>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="swiper-slide relative">
+          <img src="main-img/carousel-2.jpg" alt="" class="object-center object-cover w-full h-full">
+          <div class="absolute inset-0 flex justify-center items-center">
+              <div class="slide-content text-center text-white">
+                  <h2 class="text-3xl md:text-3xl font-bold text-red-600">Gym & Fitness Center</h2>
+                  <h3 class="text-6xl md:text-6xl font-semibold font-serif mt-8">Best Gym In Town</h3>
+                  <button class="mt-8 px-6 py-2 bg-transparent text-white hover:bg-white hover:text-black border border-white text-xl">Join Us Now</button>
+              </div>
+          </div>
+      </div>
+      
+  </div>
+</div>
+
+
+<!-- CONTEXT-DIV  -->
+<div class="bg-blue-500 px-auto py-auto grid sm:grid-cols-1 lg:grid-cols-2 mx-auto md:mx-44 mb-8">
+    <div class="slide-content text-center text-white bg-red-600 px-4 sm:px-20 py-4 sm:py-2 ">
+        <h3 class="text-3xl sm:text-6xl font-semibold font-serif mt-8 text-right">Body Building</h3>
+        <p class="text-right">Lorem justo tempor sit aliquyam invidunt, amet vero ea dolor ipsum ut diam sit dolores, dolor sit eos sea sanctus erat lorem nonumy sanctus takimata. Kasd amet sit sadipscing at..</p>
+        <div class="flex justify-end"><button class="button mt-8 mb-8 px-6 py-2 bg-transparent text-white hover:bg-white  hover:text-black border border-white text-xl">Join Us Now</button><br></div>
+    </div>
+    <div class="slide-content text-center text-white bg-black px-4 sm:px-8 py-4 sm:py-0">
+        <h3 class="text-3xl sm:text-6xl font-semibold font-serif mt-8 text-left">Muscle Building</h3>
+        <p class="text-left">Lorem justo tempor sit aliquyam invidunt, amet vero ea dolor ipsum ut diam sit dolores, dolor sit eos sea sanctus erat lorem nonumy sanctus takimata.<br> Kasd amet sit sadipscing at..</p>
+        <div class="flex justify-start"><button class="button mt-8 mb-8 px-6 py-2 bg-transparent text-white hover:bg-white  hover:text-black border border-white text-xl">Join Us Now</button><br></div>
+    </div>
+</div>
+
+<!-- container 2 -->
+<div class="bg-white px-4 sm:px-32 py-auto mx-auto max-w-7xl mb-8 overflow-hidden">
+    <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
+        <div>
+            <img src="main-img/about.jpg" alt="..." class="w-full h-full object-cover">
+        </div>
+        <div class="flex flex-col justify-center">
+            <div class="bg-white px-4 sm:px-8 py-4">
+                <h3 class="text-4xl sm:text-5xl font-semibold text-gray-800 mb-4">10 Years Experience</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium quam eget metus interdum, ut vestibulum massa condimentum. 
+                    Integer auctor ut mauris sit amet cursus. Donec nec malesuada risus. 
+                </p>
+            </div>
+            <div class="fix grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="mt-4 bg-white px-4 sm:px-8 py-4">
+                    <img src="main-img\images.png" alt="" class="h-30 w-40">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Certified GYM Center</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium quam eget 
+                    </p>
+                    <div class="flex justify-start">
+                        <button class="mt-4 px-6 py-2 bg-transparent text-red-600 hover:bg-red-500 hover:text-white border border-red-500 text-xl">Learn More</button>
+                    </div>
+                </div>
+                <div class="mt-4 bg-white px-4 sm:px-8 py-4">
+                    <img src="main-img\images.jpeg" alt="" class="h-30 w-40">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Award Winning</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium quam eget metus 
+                    </p>
+                    <!-- <div class="flex justify-start">
+                        <button class="mt-4 px-6 py-2 bg-transparent text-red-600 hover:bg-red-500 hover:text-white border border-red-500 text-xl">Explore More</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                                        <!-- detail container -->
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
+                                            <!-- First Div -->
+<div class="bg-black p-6 ">
+<h2 class="text-2xl font-bold text-white mb-2 text-center">Progression</h2>
+<div class="flex flex-row gap-4">
+    <img src="main-img\images (1).png" alt=".." class="h-28 w-28">
+<p class="text-white text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+</div>
+                                            
+                                            <!-- Second Div -->
+<div class="bg-red-600 p-6 ">
+<h2 class="text-2xl font-bold text-white mb-2 text-center">Workout</h2>
+<div class="flex flex-row gap-4">
+    <img src="main-img\images (1).jpeg" alt=".." class="h-28 w-28">
+<p class="text-white text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+</div>
+                                            
+                                            <!-- Third Div -->
+<div class="bg-black p-6 ">
+<h2 class="text-2xl font-bold text-white mb-2 text-center">
+    Nutrition</h2>
+    <div class="flex flex-row gap-4">
+        <img src="main-img\images (2).png" alt=".." class="h-28 w-28">
+    <p class="text-white text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+</div>
+</div>
+                                        
+
+                              <!-- heading -->
+<div class="text-red-500 text-2xl text-center font-bold p-2 mt-2">why choose us?</div>
+
+                              <!-- heading -->
+<div class="text-black text-4xl text-center font-bold p-2">Benifits of Joining Our GYM</div>
+
+                                <!-- benefit gym -->
+<div class="main grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20 mx-4 md:mx-8 lg:mx-32 mt-10">
+                                  <!-- COLUMN 1 -->
+<div class="grid grid-cols-2 gap-20">
+ <div class="column h-52 w-52 md:w-full lg:w-52">
+  <div class="content relative">
+   <img src="main-img\feature-1.jpg" alt="" class="object-center object-cover float-left h-44 w-full p-4">
+    <div class="absolute inset-0 flex justify-end">
+    <img src="main-img\images (2).jpeg" alt=".." class="h-20 w-20">
+  </div>
+  </div>
+ </div>
+  <div class="column h-52 w-full md:w-56 lg:w-full">
+    <h2 class="text-black font-bold">Videos Instruction</h2>
+    <p class="flex-wrap">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor</p>
+  </div>  
+</div>
+                                  <!-- COLUMN 2 -->
+<div class="grid grid-cols-2 gap-20">
+<div class="column h-52 w-52 md:w-full lg:w-52">
+<div class="content relative">
+<img src="main-img\feature-2.jpg" alt="" class="object-center object-cover float-left h-44 w-full p-4">
+<div class="absolute inset-0 flex justify-end">
+<img src="main-img\images (6).png" alt=".." class="h-20 w-20">
+</div>
+</div>
+</div>
+<div class="column h-52 w-full md:w-56 lg:w-full">
+<h2 class="text-black font-bold">Training Calendar</h2>
+<p class="flex-wrap">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor</p>
+</div>  
+</div>
+                                  <!-- COLUMN 3 -->
+<div class="grid grid-cols-2 gap-20">
+<div class="column h-52 w-52 md:w-full lg:w-52">
+<div class="content relative">
+<img src="main-img\feature-3.jpg" alt="" class="object-center object-cover float-left h-44 w-full p-4">
+<div class="absolute inset-0 flex justify-end">
+<img src="main-img\images (4).png" alt=".." class="h-20 w-20">
+</div>
+</div>
+</div>
+<div class="column h-52 w-full md:w-56 lg:w-full">
+<h2 class="text-black font-bold">Free Apps & WiFi</h2>
+<p class="flex-wrap">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor</p>
+</div>  
+</div>
+                                  <!-- COLUMN 4 -->
+<div class="grid grid-cols-2 gap-20">
+<div class="column h-52 w-52 md:w-full lg:w-52">
+<div class="content relative">
+<img src="main-img\feature-4.jpg" alt="" class="object-center object-cover float-left h-44 w-full p-4">
+<div class="absolute inset-0 flex justify-end">
+<img src="main-img\images (3).jpeg" alt=".." class="h-20 w-20">
+</div>
+</div>
+</div>
+<div class="column h-52 w-full md:w-56 lg:w-full">
+<h2 class="text-black font-bold">Community Support</h2>
+<p class="flex-wrap">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor</p>
+</div>  
+</div>
+</div>
+                                    <!-- NEWSLETTER -->
+<div class="second-container bg-opacity-40 w-screen" style="background-image: url('main-img/images (4).jpeg'); background-size: cover; background-position: center;">
+  <div class="main-row grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 bg-black bg-opacity-40 rounded-lg p-8">
+    <!-- content column -->
+    <div>
+      <h1 class="text-white text-center font-bold text-4xl m-2 mt-10">Subscribe Our Newsletter</h1>
+      <h2 class="text-white text-center m-2">Subscribe and get Our latest article in your inbox</h2>
+      <form class="text-center mt-4 mb-14">
+        <input type="email" placeholder="Enter your email" class="h-10 w-52">
+        <button type="submit" class="bg-red-600 hover:bg-red-800 w-32 h-10">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+                              <!-- heading -->
+<div class="text-red-500 text-2xl text-center font-bold p-2 mt-2">Class Timetable</div>
+
+                              <!-- heading -->
+<div class="text-black text-4xl text-center font-bold p-1">Working Hours and Class Time</div>
+                                           <!--table buttons NAV   -->
+<nav class="bg-white py-4">
+  <div class="container mx-auto">
+      <ul class="flex flex-wrap justify-center">
+          <li class="mx-2 my-2 md:mx-4">
+              <button id="allBtn" class="text-red-700 hover:text-white hover:bg-red-600 px-3 py-2 md:px-4 md:py-2 focus:outline-none focus:bg-red-600 focus:text-white" onclick="filterObjects('All Classes', this)">All Classes</button>
+          </li>
+          <li class="mx-2 my-2 md:mx-4">
+              <button id="cardioBtn" class="text-red-700 hover:text-white hover:bg-red-600 px-3 py-2 md:px-4 md:py-2 focus:outline-none focus:bg-red-600 focus:text-white" onclick="filterObjects('Cardio', this)">Cardio</button>
+          </li>
+          <li class="mx-2 my-2 md:mx-4">
+              <button id="crossfitBtn" class="text-red-700 hover:text-white hover:bg-red-600 px-3 py-2 md:px-4 md:py-2 focus:outline-none focus:bg-red-600 focus:text-white" onclick="filterObjects('Crossfit', this)">Crossfit</button>
+          </li>
+          <li class="mx-2 my-2 md:mx-4">
+              <button id="powerliftingBtn" class="text-red-700 hover:text-white hover:bg-red-600 px-3 py-2 md:px-4 md:py-2 focus:outline-none focus:bg-red-600 focus:text-white" onclick="filterObjects('Powerlifting', this)">Powerlifting</button>
+          </li>
+      </ul>
+  </div>
+</nav>
+                                          <!-- table data -->
+<div class=" table-responsive overflow-x-auto flex justify-center">
+  <table class="table-fixed mb-10">
+    <thead class="overflow-x-scroll">
+      <tr class="overflow-x-scroll">
+        <th class="px-4 py-2 bg-black text-white">Time</th>
+        <th class="px-4 py-2 bg-black text-white">Monday</th>
+        <th class="px-4 py-2 bg-black text-white">Tuesday</th>
+        <th class="px-4 py-2 bg-black text-white">Wednesday</th>
+        <th class="px-4 py-2 bg-black text-white">Thursday</th>
+        <th class="px-4 py-2 bg-black text-white">Friday</th>
+        <th class="px-4 py-2 bg-black text-white">Saturday</th>
+        <th class="px-4 py-2 bg-black text-white">Sunday</th>
+      </tr>
+    </thead>
+    <tbody class="overflow-x-scroll">
+      <tr class="overflow-x-scroll">
+        <td class="border px-4 py-2 bg-black text-white">6.00am - 8.00am</td>
+        <td class="border px-4 py-2">Cardio<br>John Deo</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Crossfit<br>Adam Phillips</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Power Lifting<br>James Alien</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Cardio<br>John Deo</td>
+      </tr>
+      <tr class="overflow-x-scroll">
+        <td class="border px-4 py-2 bg-black text-white">10.00am - 12.00am</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Power Lifting<br>James Alien</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Cardio<br>John Deo</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Crossfit<br>Adam Phillips</td>
+        <td class="border px-4 py-2"></td>
+      </tr>
+      <tr class="overflow-x-scroll">
+        <td class="border px-4 py-2 bg-black text-white">5.00pm - 7.00pm</td>
+        <td class="border px-4 py-2">Crossfit<br>Adam Phillips</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Power Lifting<br>James Alien</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Cardio<br>John Deo</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Crossfit<br>Adam Phillips</td>
+      </tr>
+      <tr class="overflow-x-scroll">
+        <td class="border px-4 py-2 bg-black text-white border-white">7.00pm - 9.00pm</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Cardio<br>John Deo</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Crossfit<br>Adam Phillips</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Power Lifting<br>James Alien</td>
+        <td class="border px-4 py-2"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- container -->
+<div class="grid grid-cols-1 md:grid-cols-2 mr-0 lg:mr-48 ">
+  <div class="second-container bg-opacity-40 w-full md:w-[50%] h-[50%]" style="background-image: url('main-img/download.jpeg'); background-size: cover; background-position: center;">
+    <div class="text-center">
+      <h1 class="text-red-700 px-6 md:px-12 lg:px-20 text-xl font-bold pt-8 md:mt-10">Body Mass Index</h1>
+      <h2 class="text-white px-6 md:px-12 lg:px-20 mb-4 text-4xl ">What is BMI?</h2>
+      <p class="text-white px-6 md:px-12 lg:px-20 mb-20">Vero elitr lorem magna justo magna justo at justo est ipsum sed clita lorem dolor ipsum sed. Lorem sea lorem vero. Sanct dolor clita clita rebum kasd magna erat diam</p>
+    </div>
+  </div>
+  <div class="w-full bg-black pr-4 md:pr-10">
+    <form class="mt-10 md:mt-28 px-4 md:px-0">
+      <label class="text-white font-bold text-3xl">Calculate your BMI</label>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 md:mt-10">
+        <input type="text" placeholder="Weight (KG)" class="h-10 w-full bg-gray-600 border hover:border-red-400">
+        <input type="text" placeholder="Height (CM)" class="h-10 w-full bg-gray-600 border hover:border-red-400">
+        <input type="text" placeholder="Age" class="h-10 w-full bg-gray-600 border hover:border-red-400">
+        <select class="h-10 w-full bg-gray-600 border hover:border-red-400">
+          <option value="" disabled selected>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        
+        
+      </div>
+      <div class="mt-4 text-center mb-10">
+        <button type="submit" class="h-10 w-full bg-gray-600 text-white hover:bg-gray-400 text-center border border-white">Calculate Now</button>
+        <div id="result"></div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+                              <!-- heading -->
+<div class="text-red-500 text-2xl text-center font-bold p-2 mt-2">Our Trainers</div>
+
+                              <!-- heading -->
+<div class="text-black text-4xl text-center font-bold p-1">Meet Our Expert Trainers</div>
+
+
+
+<div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 m-20">
+                          <!-- First Div -->
+<!-- <div class="bg-black lg:p-6 sm:-p-2">
+<img src="main-img\team-1.jpg" alt=".." class=" w-full object-center object-cover">
+<h1 class="text-red-700 text-center font-bold">Trainer Name</h1>
+<h3 class="text-white text-center">Trainer</h3>
+</div> -->
+<div class="bg-black lg:p-6 sm:-p-2 relative group">
+  <img src="main-img\team-1.jpg" alt=".." class=" w-full object-center object-cover group-hover:opacity-75">
+
+  <div class="absolute inset-0 bg-black opacity-0 blur-sm group-hover:opacity-50 transition duration-300 ease-in-out"></div>
+
+  <div class="flex justify-center items-center absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+    <a href="#">
+      <i class="fab fa-facebook-f text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+    </a>
+    <a href="#">
+      <i class="fab fa-twitter text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+    </a>
+    <a href="#">
+      <i class="fab fa-linkedin text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+    </a>
+    <a href="#">
+      <i class="fab fa-instagram text-white text-xl mx-2 mb-20 hover:text-pink-400"></i>
+    </a>
+  </div>
+
+  <h1 class="text-red-700 text-center font-bold">Trainer Name</h1>
+  <h3 class="text-white text-center">Trainer</h3>
+</div>
+
+
+  
+                                    <!-- Second Div -->
+  <!-- <div class="bg-black lg:p-6 sm:-p-2">
+    <img src="main-img\team-2.jpg" alt=".." class=" w-full object-center object-cover">
+    <h1 class="text-red-700 text-center font-bold">Trainer Name</h1>
+    <h3 class="text-white text-center">Trainer</h3>
+    </div> -->
+    <div class="bg-black lg:p-6 sm:-p-2 relative group">
+      <img src="main-img\team-2.jpg" alt=".." class=" w-full object-center object-cover group-hover:opacity-75">
+    
+      <div class="absolute inset-0 bg-black opacity-0 blur-sm group-hover:opacity-50 transition duration-300 ease-in-out"></div>
+    
+      <div class="flex justify-center items-center absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+        <a href="#">
+          <i class="fab fa-facebook-f text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-linkedin text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram text-white text-xl mx-2 mb-20 hover:text-pink-400"></i>
+        </a>
+      </div>
+    
+      <h1 class="text-red-700 text-center font-bold">Trainer Name</h1>
+      <h3 class="text-white text-center">Trainer</h3>
+    </div>
+    
+                         <!-- Third Div -->
+  <!-- <div class="bg-black lg:p-6 sm:-p-2">
+    <img src="main-img\team-3.jpg" alt=".." class=" w-full object-center object-cover">
+    <h1 class="text-red-700 text-center font-bold">Trainer Name</h1>
+    <h3 class="text-white text-center">Trainer</h3>
+    </div> -->
+    <div class="bg-black lg:p-6 sm:-p-2 relative group">
+      <img src="main-img\team-3.jpg" alt=".." class=" w-full object-center object-cover group-hover:opacity-75">
+    
+      <div class="absolute inset-0 bg-black opacity-0 blur-sm group-hover:opacity-50 transition duration-300 ease-in-out"></div>
+    
+      <div class="flex justify-center items-center absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+        <a href="#">
+          <i class="fab fa-facebook-f text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-linkedin text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram text-white text-xl mx-2 mb-20 hover:text-pink-400"></i>
+        </a>
+      </div>
+    
+      <h1 class="text-red-700 text-center font-bold">Trainer Name</h1>
+      <h3 class="text-white text-center">Trainer</h3>
+    </div>
+    
+    
+  
+                        <!-- Fourth Div -->
+  <!-- <div class="bg-black lg:p-6 sm:-p-2">
+    <img src="main-img\team-4.jpg" alt=".." class=" w-full object-center object-cover">
+    <h1 class="text-red-700 text-center font-bold">Trainer Name</h1>
+    <h3 class="text-white text-center">Trainer</h3>
+    </div> -->
+    <div class="bg-black lg:p-6 sm:-p-2 relative group">
+      <img src="main-img\team-4.jpg" alt=".." class=" w-full object-center object-cover group-hover:opacity-75">
+    
+      <div class="absolute inset-0 bg-black opacity-0 blur-sm group-hover:opacity-50 transition duration-300 ease-in-out"></div>
+    
+      <div class="flex justify-center items-center absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+        <a href="#">
+          <i class="fab fa-facebook-f text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-linkedin text-white text-xl mx-2 mb-20 hover:text-blue-300"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram text-white text-xl mx-2 mb-20 hover:text-pink-400"></i>
+        </a>
+      </div>
+    
+      <h1 class="text-red-700 text-center font-bold">Trainer Name</h1>
+      <h3 class="text-white text-center">Trainer</h3>
+    </div>
+     
+</div>
+<!-- container with testimonial -->
+<div class="grid grid-cols-1 md:grid-cols-2 ml-0 lg:ml-48">
+
+ 
+  <!-- slider -->
+  <div class="bg-gray-800 py-12 px-4 sm:px-6 lg:px-6 overflow-hidden">
+    <div class="max-w-2xl mx-auto">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class=" rounded-lg shadow-lg overflow-hidden">
+              <div class="px-6 py-8">
+
+                <div class="mt-4">
+                  <div class="flex items-center ">
+                    <img class="h-10 w-10 rounded-full mr-4 border border-gray-200" src="main-img\download (1).jpeg" alt="Avatar">
+                    <div>
+                      <div class="text-red-800 font-semibold ">Clinent Name</div>
+                      <div class="text-white mb-10">CEO, Company</div>
+                    </div>
+                  </div>
+                </div>
+                <blockquote class="text-lg font-medium text-white border border-white">
+                  "Vero elitr lorem magna justo magna justo at justo est ipsum sed clita lorem dolor ipsum sed. Lorem sea lorem vero. Sanct dolor clita clita rebum kasd magna erat diam."
+                </blockquote>
+               
+              </div>
+            </div>
+          </div>
+          <!-- Add more slides as needed -->
+          <div class="swiper-slide">
+            <div class=" rounded-lg shadow-lg overflow-hidden">
+              <div class="px-6 py-8">
+                <div class="mt-4">
+                  <div class="flex items-center">
+                    <img class="h-10 w-10 rounded-full mr-4 border border-gray-400" src="main-img\download (2).jpeg" alt="Avatar">
+                    <div>
+                      <div class="text-red-800 font-semibold">Cliient Name</div>
+                      <div class="text-white mb-10">CTO, Another Company</div>
+                    </div>
+                  </div>
+                </div>
+                <blockquote class="text-lg font-medium text-white border border-white">
+                  "Another testimonial Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                </blockquote>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+  <div class="second-container bg-opacity-40 md:w-[50%] h-[50%] flex justify-end" style="background-image: url('main-img/images (5).jpeg'); background-size: cover; background-position: center;">
+    <div class="text-center">
+      <h1 class="text-red-700 px-0 md:px-12 lg:px-20 text-xl font-bold pt-8 md:mt-10">Testimonial</h1>
+      <h2 class="text-white px-0 md:px-12 lg:px-20 mb-4 text-3xl font-bold">What Our Clients Say?</h2>
+      <p class="text-white px-0 md:px-12 lg:px-20 mb-20">Vero elitr lorem magna justo magna justo at justo est ipsum sed clita lorem dolor ipsum sed. Lorem sea lorem vero. Sanct dolor clita clita rebum kasd magna erat diam</p>
+    </div>
+  </div> 
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      speed:400,
+      spaceBetween:100,
+      autoplay: {
+        delay: 1000, // Change the delay (in milliseconds) as needed
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>  
+</div>
+<!-- CONTAINER BLOG -->
+<div class=" px-auto py-auto grid sm:grid-cols-1 lg:grid-cols-2 mx-auto md:mx-44 mb-8">
+  <div class="slide-content text-center text-white px-4 sm:px-20 py-4 sm:py-2 mt-20">
+    <img src="main-img\blog-1.jpg" alt=".." class="">
+    <div class="flex items-center mt-8">
+      <img class="h-20 w-20 rounded-full mr-4 border border-gray-400" src="main-img\download (2).jpeg" alt="Avatar">
+      <div class="text-black">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <h2>
+          <i class="fas fa-user-tie"></i> Admin
+          <i class="fas fa-code"></i> Web Design<br>
+          <i class="fas fa-comments"></i> 15 Comments
+        </h2>
+      </div>
+      
+    </div>
+    <p class="text-black">Eos kasd et sea labore. Et sed amet magna elitr amet, stet et amet erat nonumy labore lorem ut eos, sed ut at tempor diam no. Kasd sit ea amet lorem et sea, ipsum sed dolor dolores sed dolore eirmod vero dolor sed kasd accusam</p>
+      <div class="flex justify-start"><button class="button mt-8 mb-8 px-6 py-2 bg-transparent text-red-500 hover:bg-red-500 hover:text-white border border-red-600 text-xl">Read More ></button><br></div>
+    </div>
+  
+          <!-- content 2 -->
+  <div class="slide-content text-center text-white px-4 sm:px-20 py-4 sm:py-2 mt-20">
+    <img src="main-img\blog-2.jpg" alt=".." class="">
+    <div class="flex items-center mt-8">
+      <img class="h-20 w-20 rounded-full mr-4 border border-gray-400" src="main-img\download (1).jpeg" alt="Avatar">
+      <div class="text-black ">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <h2>
+          <i class="fas fa-user-tie"></i> Admin
+          <i class="fas fa-code"></i> Web Design<br>
+          <i class="fas fa-comments"></i> 15 Comments
+        </h2>
+      </div>
+      
+    </div>
+    <p class="text-black">Eos kasd et sea labore. Et sed amet magna elitr amet, stet et amet erat nonumy labore lorem ut eos, sed ut at tempor diam no. Kasd sit ea amet lorem et sea, ipsum sed dolor dolores sed dolore eirmod vero dolor sed kasd accusam</p>
+      <div class="flex justify-start"><button class="button mt-8 mb-8 px-6 py-2 bg-transparent text-red-500 hover:bg-red-500 hover:text-white border border-red-600 text-xl">Read More ></button><br></div>
+    </div>
+  </div>
+</div>
+</div>                                                                              
+                        <!-- Footer -->
+<div class="flex">
+  <div class="second-container bg-opacity-40 w-screen" style="background-image: url('main-img/images (4).jpeg'); background-size: cover; background-position: center;">
+    <div class="main-row grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 bg-black bg-opacity-40 rounded-lg p-8">
+      <!-- content column -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- First Div -->
+      <div class="bg-transparent p-6 ">
+      <h1 class="text-red-600 font-bold text-xl">Get In Touch</h1>
+      <div class="mb-4 flex items-center mt-4">
+        <img src="main-img\download.png" alt="" class="h-8 w-8 rounded-full mr-4">
+        <div>
+          <p class="text-white">123 Street, New York, USA</p>
+        </div>
+      </div>
+      <div class="mb-4 flex items-center">
+        <!-- Icon -->
+        <img src="main-img\download (1).png" alt="" class="h-8 w-8 rounded-full mr-4">
+        <!-- Contact Details -->
+        <div>
+          <label for="email" class="block text-white font-medium mb-1">Calling Us</label>
+          <p class="text-white">+012 345 67890</p>
+        </div>
+      </div>
+      <div class="mb-4 flex items-center">
+        <img src="main-img\download (2).png" alt="" class="h-8 w-8 rounded-full mr-4">
+        <div>
+          <label for="message" class="block text-white font-medium mb-1">Email Us</label>
+          <p class="text-white">info@example.com</p>
+        </div>
+    
+      </div>
+       <!-- Social Media Icons -->
+       <div class="flex items-center space-x-6 mt-6">
+        <!-- Icons and Links -->
+  
+        <!-- Adjust styling and links as needed -->
+        <a href="#" class="text-white hover:text-blue-500 transition duration-300 ease-in-out">
+          <!-- Facebook icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                  class="w-8 h-8">
+                  <path
+                      d="M12.727 6.718h-.012c-2.247 0-3.133 1.131-3.133 2.862v1.495H7v2.399h2.582v6.169h2.606v-6.169h2.552l.359-2.399h-2.911V9.72c0-.652.183-1.002 1.124-1.002h1.727V6.718z" />
+              </svg>
+  
+        </a>
+        <a href="#" class="text-white hover:text-blue-400 transition duration-300 ease-in-out">
+          <!-- Twitter icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                  class="w-8 h-8">
+                  <path
+                      d="M8.412 20.412c9.08 0 14.038-7.502 14.038-14.038 0-.214 0-.428-.012-.642A10.056 10.056 0 0 0 22 3.194a10.073 10.073 0 0 1-2.856.782 5.029 5.029 0 0 0 2.206-2.782 10.135 10.135 0 0 1-3.2 1.221A5.032 5.032 0 0 0 12.5 6.567a5.047 5.047 0 0 0-1.318 6.908A14.289 14.289 0 0 1 2.026 4.48a5.046 5.046 0 0 0 1.558 6.737A5.008 5.008 0 0 1 2 10.55v.064a5.032 5.032 0 0 0 4.034 4.914 5.036 5.036 0 0 1-2.294.087 5.033 5.033 0 0 0 4.702 3.496A10.085 10.085 0 0 1 2 18.289a14.25 14.25 0 0 0 7.412 2.123" />
+              </svg>
+  
+        </a>
+        <a href="#" class="text-white hover:text-pink-500 transition duration-300 ease-in-out">
+          <!-- Instagram icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+          class="w-8 h-8">
+          <path
+              d="M12 2.157c3.204 0 3.579.012 4.838.07 1.258.058 2.463.262 3.463.562.998.299 1.862.775 2.646 1.56.784.784 1.26 1.648 1.56 2.646.3 1 .504 2.205.562 3.463.058 1.26.07 1.635.07 4.838s-.012 3.579-.07 4.838c-.058 1.258-.262 2.463-.562 3.463-.299.998-.775 1.862-1.56 2.646-.784.784-1.648 1.26-2.646 1.56-1 .3-2.205.504-3.463.562-1.259.058-1.634.07-4.838.07s-3.579-.012-4.838-.07c-1.258-.058-2.463-.262-3.463-.562-.998-.299-1.862-.775-2.646-1.56-.784-.784-1.26-1.648-1.56-2.646-.3-1-.504-2.205-.562-3.463-.058-1.259-.07-1.634-.07-4.838s.012-3.579.07-4.838c.058-1.258.262-2.463.562-3.463.299-.998.775-1.862 1.56-2.646.784-.784 1.648-1.26 2.646-1.56.999-.3 2.205-.504 3.463-.562 1.259-.058 1.634-.07 4.838-.07zm0 1.712c-3.183 0-3.54.01-4.777.068-1.143.053-1.843.249-2.297.416-.63.189-1.074.459-1.574.959-.5.5-.77.944-.959 1.574-.167.454-.363 1.154-.416 2.297-.058 1.238-.068 1.594-.068 4.777s.01 3.54.068 4.777c.053 1.143.249 1.843.416 2.297.189.63.459 1.074.959 1.574.5.5.944.77 1.574.959.454.167 1.154.363 2.297.416 1.238.058 1.594.068 4.777.068s3.54-.01 4.777-.068c1.143-.053 1.843-.249 2.297-.416.63-.189 1.074-.459 1.574-.959.5-.5.77-.944.959-1.574.167-.454.363-1.154.416-2.297.058-1.238.068-1.594.068-4.777s-.01-3.54-.068-4.777c-.053-1.143-.249-1.843-.416-2.297-.189-.63-.459-1.074-.959-1.574-.5-.5-.944-.77-1.574-.959-.454-.167-1.154-.363-2.297-.416-1.238-.058-1.594-.068-4.777-.068zm0 4.055a3.24 3.24 0 0 1 0 6.48 3.24 3.24 0 0 1 0-6.48zm0 1.712a1.528 1.528 0 1 0 0 3.056 1.528 1.528 0 0 0 0-3.056zm5.77-.04a.777.777 0 1 0 0 1.554.777.777 0 0 0 0-1.554z" />
+      </svg>
+  
+        </a>
+      </div> 
+        
+       
+        
+          
+      </div>
+       <!-- Second Div -->
+       <div class="bg-transparent p-6 ">
+        <h1 class="text-red-700 font-bold text-xl ">Quick Links</h1>
+        <ul class="text-white mt-6">
+          <li class="hover:underline"><a href="index.html" >Home</a></li><br>
+          <li class="hover:underline"><a href="about.html" >About Us</a></li><br>
+          <li class="hover:underline"><a href="feature.html" >Our Features</a></li><br>
+          <li class="hover:underline"><a href="classes.html" >Classes</a></li><br>
+          <li class="hover:underline"><a href="contact.html" >Contact us</a></li><br>
+        </ul>
+        </div> 
+        <!-- third div -->
+        <div class="bg-transparent p-6 ">
+          <h1 class="text-red-700 font-bold text-xl">Popular Links</h1>
+          <ul class="text-white mt-6">
+            <li class="hover:underline"><a href="index.html" >Home</a></li><br>
+            <li class="hover:underline"><a href="about.html" >About Us</a></li><br>
+            <li class="hover:underline"><a href="feature.html" >Our Features</a></li><br>
+            <li class="hover:underline"><a href="classes.html" >Classes</a></li><br>
+            <li class="hover:underline"><a href="contact.html" >Contact us</a></li><br>
+          </ul>
+          </div> 
+          <!-- fourth div -->
+          <div class="bg-transparent p-6 ">
+          <h1 class="text-red-700 font-bold text-xl">Opening Hours</h1> 
+          <h2 class="text-white text-xl font-bold mt-6">Monday - Friday</h2>
+          <h3 class="text-white">8.00 AM - 8.00 PM</h3><br>
+          <h2 class="text-white text-xl font-bold">Saturday - Sunday</h2>
+          <h3 class="text-white">2.00 PM - 8.00 PM</h3>
+          </div> 
+    </div>
+  
+  
+  </div>
+  <footer class=" text-white py-4 px-4 mb-4">
+    <p class="text-center">&copy;  Your Site Name. All Rights Reserved. Designed by HTML Codex</p>
+  </footer>
+  
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  speed:400,
+  spaceBetween:100,
+  autoplay:true,
+  autoplay:{
+    delay:2000,
+  },
+});
+</script> 
+<script>
+  // Initialize Swiper
+  var swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    speed:400,
+  spaceBetween:100,
+  autoplay:true,
+  autoplay:{
+    delay:2000,
+  },
+    
+    // If you need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+</script>
+<!-- Swiper Library JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- <script>
+  var swiper = new Swiper('.swiper-container', {
+    autoplay: {
+      delay: 1000, // Change the delay (in milliseconds) as needed
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+</script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="stylesheet" rel="input.css">
+  </head>
+<style>
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 10;
+  }
+  
+  /* .dropdown-container:hover .dropdown, */
+  .dropdown-container .dropdown-active {
+    display: block;
+  }
+  @media (max-width: 768px) { /* Adjust breakpoint as needed */
+  #dropdownMenu {
+    display: none; /* Stack buttons vertically on small screens */
+  }
+}
+.dropdown-container:hover .dropdown { /* Show dropdown on hover */
+    display: block; /* Make dropdown visible */
+  }
+
+</style> 
+<body>
+  <header class="bg-black shadow-lg">
+    <nav class="container mx-auto flex items-center justify-between py-4 w-screen md:py-4 md:px-4">
+      <!-- Logo -->
+      <div class="flex items-center">
+       <h1 class="text-white font-bold text-xl">THE GYM</h1>
+      </div>
+      
+      <!-- Mobile menu toggle button -->
+      <button class="text-white md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      
+      <!-- Dropdown menu -->
+      <ul id="dropdownMenu" class="hidden md:flex md:items-center space-x-4">
+        <li class="relative">
+          <a href="index.html" class="text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">Home</a>
+        </li>
+        <li class="relative">
+          <a href="about.html" class="text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">About</a>
+        </li>
+        <li class="relative">
+          <a href="feature.html" class="text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">Our Features</a>
+        </li>
+        <li class="relative">
+          <a href="classes.html" class="text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">Classes</a>
+        </li>
+        <li class="relative dropdown-container">
+          <button type="button" class="dropdown-toggle border hover:border-white text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">
+            Pages
+          </button>
+          <ul class="dropdown hidden bg-white">
+            <li><a href="blog.html" class="block px-3 py-2 bg-white text-black hover:bg-gray-200">Blogs Grid</a></li>
+            <li><a href="blogdetail.html" class="block px-3 py-2 bg-white text-black hover:bg-gray-200">Blogs Details</a></li>
+          </ul>
+        </li> 
+        <li class="relative">
+          <a href="contact.html" class="text-white hover:text-red-500 px-3 py-2 font-medium rounded transition duration-300 ease-in-out">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Mobile dropdown menu -->
+  <div id="mobileMenu" class="md:hidden bg-white shadow-lg">
+    <ul class="flex flex-col items-center">
+      <li class="py-2">
+        <a href="index.html" class="text-black hover:text-red-500 font-medium">Home</a>
+      </li>
+      <li class="py-2">
+        <a href="about.html" class="text-black hover:text-red-500 font-medium">About</a>
+      </li>
+      <li class="py-2">
+        <a href="feature.html" class="text-black hover:text-red-500 font-medium">Our features</a>
+      </li>
+      <li class="py-2">
+        <a href="classes.html" class="text-black hover:text-red-500 font-medium">Classes</a>
+      </li>
+      <li class="relative dropdown-container">
+        <button type="button" class="text-black hover:text-red-500 font-medium">
+          Pages
+        </button>
+        <ul class="dropdown hidden bg-white py-2">
+          <li><a href="blog.html" class="block px-3 py-2 bg-white text-black hover:bg-gray-200">Blogs Grid</a></li>
+          <li><a href="blogdetail.html" class="block px-3 py-2 bg-white text-black hover:bg-gray-200">Blogs Details</a></li>
+        </ul>
+      </li>
+      <li class="py-2">
+        <a href="contact.html" class="text-black hover:text-red-500 font-medium">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- JavaScript to toggle mobile menu -->
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+  
+                               <!-- ABOUT- DIV -->
+          
+<div class="About bg-opacity-40 h-60 w-screen" style="background-image: url('main-img/images (7).jpeg'); background-size: cover; background-position: center;">
+<div class="main bg-black bg-opacity-40 h-60 w-screen p-8">
+<div class="flex justify-center">
+<h1 class="font-bold text-3xl text-white my-2">GYM CLASSES</h1>
+</div>
+<h2 class="text-white text-center hover:underline">Home /Gym Classes</h2>
+</div>
+</div>   
+<!-- CONTEXT-DIV  -->
+<div class="bg-blue-500 px-auto py-auto grid sm:grid-cols-1 lg:grid-cols-2 mx-auto md:mx-44 mb-8 mt-8">
+    <div class="slide-content text-center text-white bg-red-600 px-4 sm:px-20 py-4 sm:py-2 ">
+        <h3 class="text-3xl sm:text-6xl font-semibold font-serif mt-8 text-right">Body Building</h3>
+        <p class="text-right">Lorem justo tempor sit aliquyam invidunt, amet vero ea dolor ipsum ut diam sit dolores, dolor sit eos sea sanctus erat lorem nonumy sanctus takimata. Kasd amet sit sadipscing at..</p>
+        <div class="flex justify-end"><button class="button mt-8 mb-8 px-6 py-2 bg-transparent text-white hover:bg-white  hover:text-black border border-white text-xl">Join Us Now</button><br></div>
+    </div>
+    <div class="slide-content text-center text-white bg-black px-4 sm:px-8 py-4 sm:py-0">
+        <h3 class="text-3xl sm:text-6xl font-semibold font-serif mt-8 text-left">Muscle Building</h3>
+        <p class="text-left">Lorem justo tempor sit aliquyam invidunt, amet vero ea dolor ipsum ut diam sit dolores, dolor sit eos sea sanctus erat lorem nonumy sanctus takimata.<br> Kasd amet sit sadipscing at..</p>
+        <div class="flex justify-start"><button class="button mt-8 mb-8 px-6 py-2 bg-transparent text-white hover:bg-white  hover:text-black border border-white text-xl">Join Us Now</button><br></div>
+    </div>
+</div>
+                              <!-- heading -->
+<div class="text-red-500 text-2xl text-center font-bold p-2 mt-2">Class Timetable</div>
+
+                              <!-- heading -->
+<div class="text-black text-4xl text-center font-bold p-1">Working Hours and Class Time</div>
+                                           <!--table buttons NAV   -->
+<nav class="bg-white py-4">
+  <div class="container mx-auto">
+      <ul class="flex flex-wrap justify-center">
+          <li class="mx-2 my-2 md:mx-4">
+              <button id="allBtn" class="text-red-700 hover:text-white hover:bg-red-600 px-3 py-2 md:px-4 md:py-2 focus:outline-none focus:bg-red-600 focus:text-white" onclick="filterObjects('All Classes', this)">All Classes</button>
+          </li>
+          <li class="mx-2 my-2 md:mx-4">
+              <button id="cardioBtn" class="text-red-700 hover:text-white hover:bg-red-600 px-3 py-2 md:px-4 md:py-2 focus:outline-none focus:bg-red-600 focus:text-white" onclick="filterObjects('Cardio', this)">Cardio</button>
+          </li>
+          <li class="mx-2 my-2 md:mx-4">
+              <button id="crossfitBtn" class="text-red-700 hover:text-white hover:bg-red-600 px-3 py-2 md:px-4 md:py-2 focus:outline-none focus:bg-red-600 focus:text-white" onclick="filterObjects('Crossfit', this)">Crossfit</button>
+          </li>
+          <li class="mx-2 my-2 md:mx-4">
+              <button id="powerliftingBtn" class="text-red-700 hover:text-white hover:bg-red-600 px-3 py-2 md:px-4 md:py-2 focus:outline-none focus:bg-red-600 focus:text-white" onclick="filterObjects('Powerlifting', this)">Powerlifting</button>
+          </li>
+      </ul>
+  </div>
+</nav>
+                                          <!-- table data -->
+<div class="overflow-x-auto flex justify-center sm:text-sm">
+  <table class="table-fixed mb-10">
+    <thead>
+      <tr>
+        <th class="px-4 py-2 bg-black text-white">Time</th>
+        <th class="px-4 py-2 bg-black text-white">Monday</th>
+        <th class="px-4 py-2 bg-black text-white">Tuesday</th>
+        <th class="px-4 py-2 bg-black text-white">Wednesday</th>
+        <th class="px-4 py-2 bg-black text-white">Thursday</th>
+        <th class="px-4 py-2 bg-black text-white">Friday</th>
+        <th class="px-4 py-2 bg-black text-white">Saturday</th>
+        <th class="px-4 py-2 bg-black text-white">Sunday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border px-4 py-2 bg-black text-white">6.00am - 8.00am</td>
+        <td class="border px-4 py-2">Cardio<br>John Deo</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Crossfit<br>Adam Phillips</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Power Lifting<br>James Alien</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Cardio<br>John Deo</td>
+      </tr>
+      <tr>
+        <td class="border px-4 py-2 bg-black text-white">10.00am - 12.00am</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Power Lifting<br>James Alien</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Cardio<br>John Deo</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Crossfit<br>Adam Phillips</td>
+        <td class="border px-4 py-2"></td>
+      </tr>
+      <tr>
+        <td class="border px-4 py-2 bg-black text-white">5.00pm - 7.00pm</td>
+        <td class="border px-4 py-2">Crossfit<br>Adam Phillips</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Power Lifting<br>James Alien</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Cardio<br>John Deo</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Crossfit<br>Adam Phillips</td>
+      </tr>
+      <tr>
+        <td class="border px-4 py-2 bg-black text-white border-white">7.00pm - 9.00pm</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Cardio<br>John Deo</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Crossfit<br>Adam Phillips</td>
+        <td class="border px-4 py-2"></td>
+        <td class="border px-4 py-2">Power Lifting<br>James Alien</td>
+        <td class="border px-4 py-2"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- container -->
+<div class="grid grid-cols-1 md:grid-cols-2 mr-20">
+    <div class="second-container bg-opacity-40 w-full md:w-[50%] h-[50vh]" style="background-image: url('main-img/download.jpeg'); background-size: cover; background-position: center;">
+      <div class="text-center">
+        <h1 class="text-red-700 px-6 md:px-12 lg:px-60 text-xl font-bold pt-8 md:mt-10">Body Mass Index</h1>
+        <h2 class="text-white px-6 md:px-12 lg:px-60 mb-4 text-4xl ">What is BMI?</h2>
+        <p class="text-white px-6 md:px-12 lg:px-60 mb-20">Vero elitr lorem magna justo magna justo at justo est ipsum sed clita lorem dolor ipsum sed. Lorem sea lorem vero. Sanct dolor clita clita rebum kasd magna erat diam</p>
+      </div>
+    </div>
+    <div class="w-full bg-black pr-4 md:pr-10">
+      <form class="mt-10 md:mt-28 px-4 md:px-0">
+        <label class="text-white font-bold text-3xl">Calculate your BMI</label>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 md:mt-10">
+          <input type="text" placeholder="Weight (KG)" class="h-10 w-full bg-gray-600 border hover:border-red-400">
+          <input type="text" placeholder="Height (CM)" class="h-10 w-full bg-gray-600 border hover:border-red-400">
+          <input type="text" placeholder="Age" class="h-10 w-full bg-gray-600 border hover:border-red-400">
+          <select class="h-10 w-full bg-gray-600 border hover:border-red-400">
+            <option value="" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          
+          
+        </div>
+        <div class="mt-4 text-center mb-10">
+          <button type="submit" class="h-10 w-full bg-gray-600 text-white hover:bg-gray-400 text-center border border-white">Calculate Now</button>
+          <div id="result"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+                        <!-- Footer -->
+<div class="flex mt-10">
+<div class="second-container bg-opacity-40 w-screen" style="background-image: url('main-img/images (4).jpeg'); background-size: cover; background-position: center;">
+<div class="main-row grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 bg-black bg-opacity-40 rounded-lg p-8">
+                                                            <!-- content column -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                                              <!-- First Div -->
+<div class="bg-transparent p-6 ">
+<h1 class="text-red-600 font-bold text-xl">Get In Touch</h1>
+<div class="mb-4 flex items-center mt-4">
+<img src="main-img\download.png" alt="" class="h-8 w-8 rounded-full mr-4">
+<div>
+<p class="text-white">123 Street, New York, USA</p>
+</div>
+</div>
+<div class="mb-4 flex items-center">
+                                                              <!-- Icon -->
+<img src="main-img\download (1).png" alt="" class="h-8 w-8 rounded-full mr-4">
+                                                              <!-- Contact Details -->
+<div>
+<label for="email" class="block text-white font-medium mb-1">Calling Us</label>
+<p class="text-white">+012 345 67890</p>
+</div>
+</div>
+<div class="mb-4 flex items-center">
+<img src="main-img\download (2).png" alt="" class="h-8 w-8 rounded-full mr-4">
+<div>
+<label for="message" class="block text-white font-medium mb-1">Email Us</label>
+<p class="text-white">info@example.com</p>
+</div>
+                                                          
+</div>
+                                                             <!-- Social Media Icons -->
+<div class="flex items-center space-x-6 mt-6">
+                                                              <!-- Icons and Links -->
+                                                        
+                                                              <!-- Adjust styling and links as needed -->
+<a href="#" class="text-white hover:text-blue-500 transition duration-300 ease-in-out">
+                                                                <!-- Facebook icon -->
+<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                                                        class="w-8 h-8">
+<path
+                                                                            d="M12.727 6.718h-.012c-2.247 0-3.133 1.131-3.133 2.862v1.495H7v2.399h2.582v6.169h2.606v-6.169h2.552l.359-2.399h-2.911V9.72c0-.652.183-1.002 1.124-1.002h1.727V6.718z" />
+</svg>
+                                                        
+</a>
+<a href="#" class="text-white hover:text-blue-400 transition duration-300 ease-in-out">
+                                                                <!-- Twitter icon -->
+<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                                                        class="w-8 h-8">
+<path
+                                                                            d="M8.412 20.412c9.08 0 14.038-7.502 14.038-14.038 0-.214 0-.428-.012-.642A10.056 10.056 0 0 0 22 3.194a10.073 10.073 0 0 1-2.856.782 5.029 5.029 0 0 0 2.206-2.782 10.135 10.135 0 0 1-3.2 1.221A5.032 5.032 0 0 0 12.5 6.567a5.047 5.047 0 0 0-1.318 6.908A14.289 14.289 0 0 1 2.026 4.48a5.046 5.046 0 0 0 1.558 6.737A5.008 5.008 0 0 1 2 10.55v.064a5.032 5.032 0 0 0 4.034 4.914 5.036 5.036 0 0 1-2.294.087 5.033 5.033 0 0 0 4.702 3.496A10.085 10.085 0 0 1 2 18.289a14.25 14.25 0 0 0 7.412 2.123" />
+</svg>
+                                                        
+</a>
+<a href="#" class="text-white hover:text-pink-500 transition duration-300 ease-in-out">
+                                                                <!-- Instagram icon -->
+<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                                                class="w-8 h-8">
+<path
+                                                                    d="M12 2.157c3.204 0 3.579.012 4.838.07 1.258.058 2.463.262 3.463.562.998.299 1.862.775 2.646 1.56.784.784 1.26 1.648 1.56 2.646.3 1 .504 2.205.562 3.463.058 1.26.07 1.635.07 4.838s-.012 3.579-.07 4.838c-.058 1.258-.262 2.463-.562 3.463-.299.998-.775 1.862-1.56 2.646-.784.784-1.648 1.26-2.646 1.56-1 .3-2.205.504-3.463.562-1.259.058-1.634.07-4.838.07s-3.579-.012-4.838-.07c-1.258-.058-2.463-.262-3.463-.562-.998-.299-1.862-.775-2.646-1.56-.784-.784-1.26-1.648-1.56-2.646-.3-1-.504-2.205-.562-3.463-.058-1.259-.07-1.634-.07-4.838s.012-3.579.07-4.838c.058-1.258.262-2.463.562-3.463.299-.998.775-1.862 1.56-2.646.784-.784 1.648-1.26 2.646-1.56.999-.3 2.205-.504 3.463-.562 1.259-.058 1.634-.07 4.838-.07zm0 1.712c-3.183 0-3.54.01-4.777.068-1.143.053-1.843.249-2.297.416-.63.189-1.074.459-1.574.959-.5.5-.77.944-.959 1.574-.167.454-.363 1.154-.416 2.297-.058 1.238-.068 1.594-.068 4.777s.01 3.54.068 4.777c.053 1.143.249 1.843.416 2.297.189.63.459 1.074.959 1.574.5.5.944.77 1.574.959.454.167 1.154.363 2.297.416 1.238.058 1.594.068 4.777.068s3.54-.01 4.777-.068c1.143-.053 1.843-.249 2.297-.416.63-.189 1.074-.459 1.574-.959.5-.5.77-.944.959-1.574.167-.454.363-1.154.416-2.297.058-1.238.068-1.594.068-4.777s-.01-3.54-.068-4.777c-.053-1.143-.249-1.843-.416-2.297-.189-.63-.459-1.074-.959-1.574-.5-.5-.944-.77-1.574-.959-.454-.167-1.154-.363-2.297-.416-1.238-.058-1.594-.068-4.777-.068zm0 4.055a3.24 3.24 0 0 1 0 6.48 3.24 3.24 0 0 1 0-6.48zm0 1.712a1.528 1.528 0 1 0 0 3.056 1.528 1.528 0 0 0 0-3.056zm5.77-.04a.777.777 0 1 0 0 1.554.777.777 0 0 0 0-1.554z" />
+</svg>
+                                                        
+</a>
+</div>                           
+</div>
+                                                             <!-- Second Div -->
+<div class="bg-transparent p-6 ">
+<h1 class="text-red-700 font-bold text-xl ">Quick Links</h1>
+<ul class="text-white mt-6">
+<li class="hover:underline"><a href="index.html" >Home</a></li><br>
+<li class="hover:underline"><a href="about.html" >About Us</a></li><br>
+<li class="hover:underline"><a href="feature.html" >Our Features</a></li><br>
+<li class="hover:underline"><a href="classes.html" >Classes</a></li><br>
+<li class="hover:underline"><a href="contact.html" >Contact us</a></li><br>
+</ul>
+</div> 
+                                                              <!-- third div -->
+<div class="bg-transparent p-6 ">
+<h1 class="text-red-700 font-bold text-xl">Popular Links</h1>
+<ul class="text-white mt-6">
+<li class="hover:underline"><a href="index.html" >Home</a></li><br>
+<li class="hover:underline"><a href="about.html" >About Us</a></li><br>
+<li class="hover:underline"><a href="feature.html" >Our Features</a></li><br>
+<li class="hover:underline"><a href="classes.html" >Classes</a></li><br>
+<li class="hover:underline"><a href="contact.html" >Contact us</a></li><br>
+</ul>
+</div> 
+                                                                <!-- fourth div -->
+<div class="bg-transparent p-6 ">
+<h1 class="text-red-700 font-bold text-xl">Opening Hours</h1> 
+<h2 class="text-white text-xl font-bold mt-6">Monday - Friday</h2>
+<h3 class="text-white">8.00 AM - 8.00 PM</h3><br>
+<h2 class="text-white text-xl font-bold">Saturday - Sunday</h2>
+<h3 class="text-white">2.00 PM - 8.00 PM</h3>
+</div> 
+</div>
+                                                        
+                                                        
+</div>
+<footer class=" text-white py-4 px-4 mb-4">
+<p class="text-center">&copy;  Your Site Name. All Rights Reserved. Designed by HTML Codex</p>
+</footer>
+                                                        
+</div>
+                                  
+<script src="script.js"></script>
+
+</body>
+</html>

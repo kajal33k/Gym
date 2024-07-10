@@ -1,0 +1,68 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-out;
+  }
+  
+  .slides img {
+    width: 100%;
+    height: auto;
+  }
+  .button{
+    align-items: end;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 10;
+  }
+ /* Responsive styles */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .dropdown-container {
+    display: block; /* Stack buttons vertically on small screens */
+  }
+
+  /* .dropdown {
+    position: static; 
+    display: none; 
+    margin-top: 1px; 
+  } */
+
+  .dropdown-container:hover .dropdown { /* Show dropdown on hover */
+    display: block; /* Make dropdown visible */
+  }
+}
+  /* .dropdown-container:hover .dropdown, */
+  .dropdown-container .dropdown-active {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .overflow-x-auto {
+      overflow-x: scroll;
+    }
+  
+    /* Optional: Adjust padding/margin for small screens */
+    .td {
+      padding: 2px 5px; /* Adjust as needed */
+    }
+  }
+  @media (max-width: 768px) {
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+} 
